@@ -17,8 +17,8 @@ function handleCreateBoxes() {
 	for (let i = 0; i < inputField.value; i++) {
 		let colorBox = getRandomHexColor();
 		let boxSize = i * 10 + minDefaultSize;
-		// const markup = `<div class="newBox" style= background:${colorBox};width:${boxSize}px;height:${boxSize}px ></div>`;
-		const markup = `<div class="newBox" style= background:${colorBox}; width:${boxSize}px; height:${boxSize}px ></div>`;
+		const markup = `<div class="newBox" style= background:${colorBox};width:${boxSize}px;height:${boxSize}px ></div>`;
+		// const markup = `<div class="newBox" style= background:${colorBox}; width:${boxSize}px; height:${boxSize}px ></div>`;
 
 		boxes.insertAdjacentHTML("afterbegin", markup);
 	}
