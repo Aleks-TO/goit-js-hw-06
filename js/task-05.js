@@ -5,9 +5,10 @@ const outputName = document.querySelector("#name-output");
 inputName.addEventListener("input", handleAddName);
 // пишемо функцію
 function handleAddName() {
-	if (inputName.value === "") {
+	if (inputName.value.trim() === "") {
+		// метод трім для видалення пробілів
 		outputName.textContent = "Anonymous";
 	} else {
-		outputName.textContent = inputName.value;
+		outputName.textContent = inputName.value.trim();
 	}
 }

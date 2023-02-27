@@ -12,6 +12,7 @@ console.log(inputField.value.length);
 function handleCheckInput(e) {
 	if (inputField.value.length === dataLength) {
 		inputField.classList.add("valid");
+		inputField.classList.remove("invalid");
 	} else {
 		inputField.classList.remove("valid");
 		inputField.classList.add("invalid");

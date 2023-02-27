@@ -8,7 +8,10 @@ const btnDestroy = document.querySelector("button[data-destroy]");
 const boxes = document.querySelector("#boxes");
 // ставимо слухача
 btnCreate.addEventListener("click", handleCreateBoxes);
-btnDestroy.addEventListener("click", () => (boxes.innerHTML = ""));
+btnDestroy.addEventListener("click", () => {
+	boxes.innerHTML = "";
+	inputField.value = "";
+});
 
 // пишемо функцію
 function handleCreateBoxes() {
@@ -20,6 +23,6 @@ function handleCreateBoxes() {
 		const markup = `<div class="newBox" style= background:${colorBox};width:${boxSize}px;height:${boxSize}px ></div>`;
 		// const markup = `<div class="newBox" style= background:${colorBox}; width:${boxSize}px; height:${boxSize}px ></div>`;
 
-		boxes.insertAdjacentHTML("afterbegin", markup);
+		boxes.insertAdjacentHTML("beforeend", markup);
 	}
 }

@@ -12,7 +12,7 @@ formEl.addEventListener("submit", handleCheckForm);
 function handleCheckForm(event) {
 	event.preventDefault(); // відключаємо перезавантаження
 
-	if (emailInput.value === "" && passInput.value === "") {
+	if (emailInput.value === "" || passInput.value === "") {
 		// emailInput.style.border = `1px solid red`;
 		return alert("ERROR!!!  Please fill oll fields");
 	}
